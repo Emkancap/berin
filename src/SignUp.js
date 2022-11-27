@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 export default function SignUp() {
   const [name, setName] = useState("");
@@ -6,11 +7,29 @@ export default function SignUp() {
   const [password, setPassword] = useState("");
   const [passwordR, setPasswordR] = useState("");
   const [accept, setAccept] = useState(false);
+  const [emailError, setEmailError] = useState("");
 
-  function Submit(e) {
+  async function Submit(e) {
+    let flag = true;
     e.preventDefault();
     setAccept(true);
+    if (name === "" || password.length < 8 || passwordR !== password) {
+      flag = false;
+    } else flag = true;
+    try {
+      if (flag) {
+        let res = await axios.post("http://127.0.0.1:8000/api/register", {
+          name: name,
+          email: email,
+          password: password,
+          password_confirmation: passwordR,
+        });
+      }
+    } catch (err) {
+      setEmailError(err.response.status);
+    }
   }
+
   return (
     <div className="parent">
       <div className="register">
@@ -23,6 +42,9 @@ export default function SignUp() {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
+          {name === "" && accept && (
+            <p className="error">Username is Required</p>
+          )}
           <label htmlFor="email">Email:</label>
           <input
             type="email"
@@ -32,6 +54,9 @@ export default function SignUp() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
+          {accept && emailError === 422 && (
+            <p className="error">Email Is already been taken</p>
+          )}
           <label htmlFor="password">Password:</label>
           <input
             type="password"
@@ -41,7 +66,7 @@ export default function SignUp() {
             onChange={(e) => setPassword(e.target.value)}
           />
           {password.length < 8 && accept && (
-            <p>Password must be more than 8 Char</p>
+            <p className="error">Password must be more than 8 Char</p>
           )}
           <label htmlFor="repeat">Repeat Password:</label>
           <input
@@ -51,7 +76,9 @@ export default function SignUp() {
             value={passwordR}
             onChange={(e) => setPasswordR(e.target.value)}
           />
-          {passwordR !== password && accept && <p>Password dose not match</p>}
+          {passwordR !== password && accept && (
+            <p className="error">Password dose not match</p>
+          )}
 
           <div style={{ textAlign: "center" }}>
             <button type="submit">Register</button>
