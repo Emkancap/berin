@@ -37,13 +37,18 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
+
 .nav-item a {
   transition: 0.3s;
 }
 @media (max-width: 992px) {
   .active::before {
-    top: 50%;
-    right: 35%;
+    top: 45%;
+    right: 30%;
+    transform: translateY(-50%);
+  }
+  .question-nav.active::before {
+    right: 20%;
   }
   .navbar ul {
     padding-right: 0;
@@ -159,6 +164,7 @@ body {
   }
   .end-footer {
     margin-bottom: 1rem;
+    flex-direction: column-revers;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
@@ -188,31 +194,9 @@ body {
 
 /* Start Landing */
 
-.img-landing {
-  background-image: url(./Assest/Home/landing.png);
-  width: 100vw;
-  height: 110vh;
-  top: -10px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.text-landing {
-  position: absolute;
-  padding: 30px;
-  border: 2px solid white;
-  top: 50%;
-  transform: translateY(-40%);
-  right: 7.5rem;
-  width: 600px;
-  height: 300px;
-  backdrop-filter: blur(5px);
-  background: rgba(242, 242, 242, 0.15);
-}
 .box {
   margin-right: 8%;
   width: 80%;
-
   overflow: hidden;
 }
 
@@ -225,7 +209,6 @@ body {
   padding: 20px;
   transition: 0.3s;
   position: relative;
-  overflow: hidden;
 }
 .inner-custom .img-b {
   content: "";
@@ -239,8 +222,48 @@ body {
 .inner-custom .parent-bubbles:hover {
   background-color: #d9d9d9 !important;
 }
-.inner-custom div:hover .img-b {
-  transform: translateY(-300%);
+.inner-custom div .img-b {
+  animation: bubble 8s infinite;
+}
+.inner-custom div .img-b2 {
+  animation: bubble 8s infinite 2s;
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 90px;
+  transition: 1s;
+  bottom: -100%;
+  z-index: 3;
+}
+.inner-custom div .img-b3 {
+  animation: bubble 8s infinite 4s;
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 90px;
+  transition: 1s;
+  bottom: -100%;
+  z-index: 3;
+}
+.inner-custom div .img-b4 {
+  animation: bubble 8s infinite 6s;
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 90px;
+  transition: 1s;
+  bottom: -100%;
+  z-index: 3;
+}
+.inner-custom div .img-b5 {
+  animation: bubble 8s infinite 3s;
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 90px;
+  transition: 1s;
+  bottom: -100%;
+  z-index: 3;
 }
 .bubbles {
   transition: 1s;
@@ -250,14 +273,21 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
   color: white;
   padding: 20px 0;
 }
 .inner-p {
-  font-weight: normal !important;
   width: 70%;
+  font-weight: 400 !important;
+  text-align: center;
+}
+@media (max-width: 668px) {
+  .inner-p {
+    text-align: right !important;
+    width: 50%;
+  }
 }
 
 .inner-custom-2 div p {
@@ -275,8 +305,43 @@ body {
   font-weight: bold;
   margin-top: 10px;
 }
+.carousel-indicators .bubble-sliders button {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.033);
+  border: 1px solid #1b1b1f;
+  margin: 0 3px !important  ;
+}
+.carousel-indicators .bubble-sliders button.active {
+  background-color: #1b1b1f;
+  border: 1px solid white;
+  outline: 1px solid black;
+}
+.carousel-indicators {
+  margin: 0 !important;
+  background-color: rgb(242, 242, 242, 0.2);
+}
+.carousel-control-next,
+.carousel-control-prev {
+  background-color: inherit !important;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: rgb(27, 27, 31, 0.5);
+  height: 25px;
+  transform: rotate(180deg);
+}
+.carousel-control-next-icon:hover,
+.carousel-control-prev-icon:hover {
+  background-color: black;
+}
+.carousel-indicators [data-bs-target] {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .custom .container {
     width: 30% !important;
     padding-left: 0 !important;
@@ -284,11 +349,24 @@ body {
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
+  .carousel.slide {
+    position: relative;
+  }
+  .carousel-indicators {
+    transform: rotate(90deg);
+    width: 215px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+  }
   .box {
     padding: 0 !important;
     box-shadow: 10px 12px 40px rgba(27, 27, 31, 0.08);
     position: absolute;
-    bottom: -40px;
+    bottom: -140px;
+  }
+  .parent-home-land {
+    margin-bottom: 25vh;
   }
   .inner-custom {
     width: 70%;
@@ -306,20 +384,12 @@ body {
     width: 20% !important;
   }
 }
-@media (max-width: 768px) {
-  .text-landing {
-    width: 100%;
-    right: 0;
-    border: 0;
-    background-color: inherit;
-    backdrop-filter: blur(0);
+@media (max-width: 992px) {
+  .parent-bubbles {
+    overflow: hidden;
   }
-  .text-landing p {
-    font-size: calc(1.375rem + 1.5vw);
-  }
-  .img-landing {
-    margin-right: 0;
-  }
+}
+@media (max-width: 767px) {
   .inner-custom {
     width: 100%;
   }
@@ -538,8 +608,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* grid-template-columns: repeat(17, 1fr);
-  grid-template-rows: repeat(2, 1fr); */
 }
 .box-slider-news h2 {
   font-size: 22px;
@@ -558,19 +626,6 @@ body {
   box-shadow: 10px 14px 40px rgba(0, 0, 0, 0.08);
   width: 30%;
 }
-/* 
-.box-news-qetaf {
-  grid-column: 1/6;
-  grid-row: 1/3;
-}
-.box-news-tamayoz {
-  grid-column: 7/12;
-  grid-row: 1/3;
-}
-.box-news-apple {
-  grid-column: 13/18;
-  grid-row: 1/3;
-} */
 @media (max-width: 767px) {
   .news-p1,
   .news-p2,
@@ -578,11 +633,6 @@ body {
     width: 100% !important;
     margin: 20px 0;
   }
-  /* .box-news-tamayoz,
-  .box-news-qetaf,
-  .box-news-apple {
-    grid-column: 1/18;
-  } */
 }
 @media (max-width: 992px) {
   .box-news-qetaf,
@@ -601,6 +651,190 @@ body {
 }
 /* News */
 
+/* Map */
+
+.map {
+  margin: 3rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+@media (max-width: 768px) {
+  .map {
+    flex-direction: column;
+    justify-content: center !important;
+  }
+  .map h3 {
+    width: 100% !important;
+    text-align: center;
+  }
+  .fount-parent {
+    height: 50% !important;
+    width: 100%;
+  }
+}
+.fount-parent {
+  position: relative;
+  background-image: url("./Assest/Home/Saudia\ Arabia.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+}
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate-center2 {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center2 {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-center {
+  border: 5px dotted blue;
+  border-radius: 50%;
+  border-right: none;
+  border-top: none;
+  border-left: none;
+  -webkit-animation: rotate-center 3s linear infinite both;
+  animation: rotate-center 3s linear infinite both;
+}
+.rotate-center2 {
+  border: 5px dotted blue;
+  border-radius: 50%;
+  border-right: none;
+  border-top: none;
+  border-left: none;
+  -webkit-animation: rotate-center 3s linear infinite reverse;
+  animation: rotate-center 3s linear infinite reverse;
+}
+.water1 {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 10px;
+  left: 10px;
+}
+.water2 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 10px;
+  left: 10px;
+}
+.water3 {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  top: 10px;
+  left: 10px;
+}
+.water4 {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 10px;
+  left: 20px;
+}
+.water5 {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  top: 10px;
+  left: 10px;
+}
+.water6 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 10px;
+  left: 0;
+}
+.fountain-right {
+  position: absolute;
+  left: 100px;
+}
+.fountain-left {
+  position: absolute;
+  left: 10px;
+}
+.fountain-animation {
+  position: absolute;
+}
+.fountain-animation:after {
+  content: "";
+  display: block;
+  width: 220px;
+  height: 60px;
+  /*   border: 2px solid red; */
+  position: absolute;
+  top: 55px;
+  background-color: #50b066;
+  left: 0;
+}
+.small {
+  top: 50px;
+  left: 0px;
+}
+.big {
+  top: 20px;
+  left: 0px;
+  transform: scaleY(1.6);
+}
+
+#second-fountain {
+  position: absolute;
+  top: 156px;
+  left: 187px;
+}
+#show-fountain {
+  display: none;
+}
+.block-base {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: inherit;
+  z-index: 4;
+  bottom: 0;
+  left: 50%;
+}
 /* Recruitment */
 
 .parent-recruitment {
@@ -625,6 +859,17 @@ body {
 }
 .text-recruit {
   width: 50%;
+}
+@media (min-width: 992px) {
+  .inner-custom {
+    height: 251px;
+  }
+  .inner-custom .parent-bubbles {
+    height: 100%;
+  }
+  .custom .container {
+    height: 251px;
+  }
 }
 @media (max-width: 992px) {
   .text-recruit {
@@ -653,4 +898,20 @@ body {
   }
 }
 
-/* Recruitment */
+.contact-img {
+  max-width: 75%;
+}
+@media (max-width: 668px) {
+  .contact-img {
+    max-width: 100%;
+  }
+}
+
+@keyframes bubble {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translateY(-600%);
+  }
+}

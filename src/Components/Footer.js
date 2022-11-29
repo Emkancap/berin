@@ -26,22 +26,22 @@ export default function Footer() {
             >
               <li>
                 <Link>
-                  <i class="fa-brands fa-square-whatsapp"></i>
+                  <i className="fa-brands fa-square-whatsapp"></i>
                 </Link>
               </li>
               <li>
                 <Link>
-                  <i class="fa-brands fa-square-instagram"></i>
+                  <i className="fa-brands fa-square-instagram"></i>
                 </Link>
               </li>
               <li>
                 <Link>
-                  <i class="fa-brands fa-twitter"></i>
+                  <i className="fa-brands fa-twitter"></i>
                 </Link>
               </li>
               <li>
                 <Link>
-                  <i class="fa-brands fa-facebook"></i>
+                  <i className="fa-brands fa-facebook"></i>
                 </Link>
               </li>
             </ul>
@@ -49,10 +49,56 @@ export default function Footer() {
         </div>
       </div>
       <div className="end-footer d-flex justify-content-evenly align-items-center p-3">
-        <Link>
-          <p className="m-0">شهادة ضريبة القيمة المضافة</p>
-        </Link>
-        <Link>
+        <a
+          style={{ cursor: "pointer" }}
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          شهادة ضريبة القيمة المضافة
+        </a>
+
+        <div
+          className="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLabel">
+                  شهادة ضريبة القيمة المضافة
+                </h5>
+                <button
+                  type="button"
+                  className="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div className="modal-body">
+                <div className="modal-dialog modal-dialog-scrollable">
+                  <img
+                    src={require("../Assest/Questions/berain_tax_cer.png")}
+                    alt="img"
+                    className="img-fluid"
+                  />
+                </div>
+              </div>
+              <div className="modal-footer">
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  إغلاق
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Link to="/policy">
           <p className="m-0">الخصوصية وسياسة الاسترجاع</p>
         </Link>
       </div>

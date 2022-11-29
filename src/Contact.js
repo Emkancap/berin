@@ -14,7 +14,7 @@ export default function Contact() {
           <img
             src={require("./Assest/Contact/unsplash_WEDDt-u3q3o.png")}
             alt="img"
-            style={{ maxWidth: "100%" }}
+            className="contact-img"
           />
         </div>
         <div className="text-white">
@@ -62,7 +62,7 @@ export default function Contact() {
           }}
         >
           <div
-            className="py-5"
+            className="py-2"
             style={{ borderBottom: "1px solid rgba(246, 246, 246, 0.5)" }}
           >
             <label htmlFor="name" className="py-3 d-block text-white">
@@ -83,7 +83,7 @@ export default function Contact() {
           </div>
 
           <div
-            className="py-5"
+            className="py-2"
             style={{ borderBottom: "1px solid rgba(246, 246, 246, 0.5)" }}
           >
             <label htmlFor="email" className="py-3 d-block text-white">
@@ -103,7 +103,7 @@ export default function Contact() {
             ></input>
           </div>
           <div
-            className="py-5"
+            className="py-2"
             style={{ borderBottom: "1px solid rgba(246, 246, 246, 0.5)" }}
           >
             <label htmlFor="phone" className="py-3 d-block text-white">
@@ -123,7 +123,7 @@ export default function Contact() {
             ></input>
           </div>
           <div
-            className="py-5"
+            className="py-2"
             style={{ borderBottom: "1px solid rgba(246, 246, 246, 0.5)" }}
           >
             <label htmlFor="message" className="py-3 d-block text-white">
