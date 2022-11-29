@@ -164,7 +164,7 @@ body {
   }
   .end-footer {
     margin-bottom: 1rem;
-    flex-direction: column-revers;
+    flex-direction: column-reverse;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
