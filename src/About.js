@@ -1,6 +1,6 @@
 import Bubble from "./Components/Bubble";
 import Box from "./Components/Box";
-import Carousel from "react-elastic-carousel";
+import Carousel from "@itseasy21/react-elastic-carousel";
 
 export default function About() {
   const breakPoints = [
