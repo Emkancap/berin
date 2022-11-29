@@ -1,6 +1,7 @@
 import Box from "./Components/Box";
 import axios from "axios";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const [name, setName] = useState("");
@@ -460,16 +461,20 @@ export default function Home() {
               دولية ومحلية تضمن كفاءة إنتاجها المائي ومطابقتها الكاملة لأعلى
               المواصفات والمعايير العالمية.
             </p>
-            <div
-              className="read-more position-relative"
-              style={{ cursor: "pointer" }}
-            >
-              <p style={{ marginBottom: "0" }}>اقرأ المزيد</p>
-              <img
-                style={{ marginTop: "0" }}
-                src={require("./Assest/Home/Arrow 1.png")}
-                alt=""
-              />
+            <div className="read-more position-relative">
+              <Link
+                to="/about"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <p style={{ marginBottom: "0", textDecoration: "none" }}>
+                  اقرأ المزيد
+                </p>
+                <img
+                  style={{ marginTop: "0" }}
+                  src={require("./Assest/Home/Arrow 1.png")}
+                  alt=""
+                />
+              </Link>
             </div>
           </div>
           <div className="col-md-6 position-relative my-5">
