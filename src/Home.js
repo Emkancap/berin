@@ -266,7 +266,7 @@ export default function Home() {
           <p className="custom-p"></p>
           <div className="map d-flex align-items-center justify-content-between">
             <h3 data-aos="fade-down" className="text-black w-50">
-              خدمة التوصيل إلى كافة المدن السعودية عن طريق مندوبي الشركة.
+              خدمة توصيل المياه إلى كافة المدن السعودية عن طريق مندوبي الشركة.
               <h3> يوجد أكثر من 40 مندوب في كل مدينة لخدمتك</h3>
             </h3>
             <div className="fount-parent" data-aos="fade-right">
