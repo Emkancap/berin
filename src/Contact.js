@@ -107,7 +107,7 @@ export default function Contact() {
             style={{ borderBottom: "1px solid rgba(246, 246, 246, 0.5)" }}
           >
             <label htmlFor="phone" className="py-3 d-block text-white">
-              رقم الهاتف او الجوال ؟
+              رقم الجوال ؟
             </label>
             <input
               type="text"
@@ -119,7 +119,7 @@ export default function Contact() {
                 caretColor: "white",
                 color: "white",
               }}
-              placeholder="96633555448"
+              placeholder="966583806995"
             ></input>
           </div>
           <div
