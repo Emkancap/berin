@@ -665,6 +665,8 @@ body {
   .map {
     flex-direction: column;
     justify-content: center !important;
+    height: 40vh;
+    margin: 0 !important;
   }
   .map h3 {
     width: 100% !important;
@@ -673,6 +675,11 @@ body {
   .fount-parent {
     height: 50% !important;
     width: 50%;
+  }
+}
+@media (max-width: 1266px) {
+  .fount-parent {
+    background-size: contain !important;
   }
 }
 .fount-parent {
