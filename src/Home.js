@@ -11,8 +11,8 @@ export default function Home() {
 
   async function submit(e) {
     e.preventDefault();
-    const n = await axios("https://emkanfinances.net/api/add-message", {
-      method: "post",
+    const n = await axios("http://emkanfinances.net/api/add", {
+      method: "POST",
       headers: "application/json",
       data: {
         name: name,
@@ -30,6 +30,37 @@ export default function Home() {
 
   return (
     <div>
+      <a
+        style={{ cursor: "pointer" }}
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        شهادة ضريبة القيمة المضافة
+      </a>
+
+      <div
+        className="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title" id="exampleModalLabel">
+                تم إرسال الرسالة بنجاح{" "}
+              </h5>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="position-relative parent-home-land">
         <div
           animation="slider"
@@ -312,6 +343,7 @@ export default function Home() {
             <div style={{ backgroundColor: "white" }}></div>
             <div className="container position-relative">
               <form
+                onSubmit={submit}
                 className="mt-5 position-relative"
                 style={{
                   borderTop: "1px solid rgba(246, 246, 246, 0.5)",
@@ -328,6 +360,8 @@ export default function Home() {
                   <input
                     type="text"
                     id="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     style={{
                       backgroundColor: "inherit",
                       outline: "none",
@@ -347,6 +381,8 @@ export default function Home() {
                     البريد الإلكتروني
                   </label>
                   <input
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     type="text"
                     id="email"
                     style={{
@@ -367,6 +403,8 @@ export default function Home() {
                     رقم الجوال ؟
                   </label>
                   <input
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
                     type="text"
                     id="phone"
                     style={{
@@ -387,6 +425,8 @@ export default function Home() {
                     الرسالة...
                   </label>
                   <textarea
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                     type="text"
                     id="message"
                     style={{
@@ -400,7 +440,7 @@ export default function Home() {
                     placeholder="مرحباً بيرين, هل يمكنكم مساعدتي ب....*"
                   ></textarea>
                 </div>
-                <div
+                <button
                   className="d-flex align-items-center justify-content-center flex-column"
                   style={{
                     backgroundColor: "#50B065",
@@ -413,11 +453,12 @@ export default function Home() {
                     zIndex: "1",
                     cursor: "pointer",
                     userSelect: "none",
+                    border: "none",
                   }}
                 >
                   <img src={require("./Assest/Contact/send2.png")} alt="icon" />
                   <p className="text-white">إرسال</p>
-                </div>
+                </button>
               </form>
             </div>
           </div>
