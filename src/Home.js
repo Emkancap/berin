@@ -424,7 +424,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="about-us container">
+      <div className="about-us mt-3 container">
         <div className="row align-items-center justify-content-center custom-about my-4 ">
           <div className="col-md-6">
             <h1 className="custom-h1">من نحن</h1>
