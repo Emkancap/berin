@@ -653,13 +653,14 @@ body {
 
 /* Map */
 
+.our-services {
+  padding: 3rem 0;
+}
 .map {
-  margin: 3rem 0;
-
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70vh;
+  height: 38vh;
 }
 @media (max-width: 768px) {
   .map {
@@ -672,14 +673,10 @@ body {
     width: 100% !important;
     text-align: right;
   }
-  .fount-parent {
-    height: 50% !important;
-    width: 50%;
-  }
 }
 @media (max-width: 1266px) {
   .fount-parent {
-    background-size: contain !important;
+    background-size: cover !important;
   }
 }
 .fount-parent {
@@ -688,7 +685,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
+  height: 70vh;
   width: 100%;
 }
 

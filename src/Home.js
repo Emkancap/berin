@@ -260,15 +260,18 @@ export default function Home() {
       </div>
 
       {/* Map */}
-      <div className="container">
-        <div className="map d-flex align-items-center justify-content-between">
-          <h3 data-aos="fade-down" className="text-black w-50">
-            خدمة التوصيل إلى كافة المدن السعودية عن طريق مندوبي الشركة.
-            <h3> يوجد أكثر من 40 مندوب في كل مدينة لخدمتك</h3>
-          </h3>
-          <div className="fount-parent" data-aos="fade-right">
-            <div id="second-fountain">
-              {/* <div class="fountain-animation small">
+      <div className="container ">
+        <div className="our-services">
+          <h1 className="fw-bold">خدماتنا</h1>
+          <p className="custom-p"></p>
+          <div className="map d-flex align-items-center justify-content-between">
+            <h3 data-aos="fade-down" className="text-black w-50">
+              خدمة التوصيل إلى كافة المدن السعودية عن طريق مندوبي الشركة.
+              <h3> يوجد أكثر من 40 مندوب في كل مدينة لخدمتك</h3>
+            </h3>
+            <div className="fount-parent" data-aos="fade-right">
+              <div id="second-fountain">
+                {/* <div class="fountain-animation small">
                 <div class="fountain-right">
                   <div class="rotate-center water1"></div>
                   <div class="rotate-center water2"></div>
@@ -281,7 +284,7 @@ export default function Home() {
                   <div class="rotate-center2 water6"></div>
                 </div>
               </div> */}
-              {/* <div class="fountain-animation big">
+                {/* <div class="fountain-animation big">
                 <div class="fountain-right">
                   <div class="rotate-center water1"></div>
                   <div class="rotate-center water2"></div>
@@ -295,11 +298,11 @@ export default function Home() {
                 </div>
                 <div className="block-base"></div>
               </div> */}
+              </div>
             </div>
           </div>
         </div>
       </div>
-
       {/* End Map */}
       <div className="container">
         <div className="Our-offers mt-5">
