@@ -1,6 +1,71 @@
+import { useState, useRef } from "react";
+import axios from "axios";
 export default function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const ref = useRef(null);
+
+  async function submit(e) {
+    e.preventDefault();
+    const n = await axios("http://emkanfinances.net/api/add", {
+      method: "POST",
+      headers: "application/json",
+      data: {
+        name: name,
+        email: email,
+        phone: phone,
+        message: message,
+      },
+    })
+      .then((res) => {
+        if (res.status === 200) {
+          ref.current.click();
+          window.setTimeout(() => {
+            window.location.pathname = "/";
+          }, 5000);
+        }
+      })
+      .catch((err) => console.log(err));
+  }
+
   return (
     <div style={{ backgroundColor: "#01305D" }} className="mt-5 pb-5">
+      <a
+        data-keyboard="false"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModalContact"
+        ref={ref}
+      ></a>
+
+      <div
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        className="modal fade"
+        id="exampleModalContact"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title" id="exampleModalLabel">
+                تم إرسال الرسالة بنجاح{" "}
+              </h5>
+              <div class="success-checkmark">
+                <div class="check-icon">
+                  <span class="icon-line line-tip"></span>
+                  <span class="icon-line line-long"></span>
+                  <div class="icon-circle"></div>
+                  <div class="icon-fix"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div style={{ height: "40vh", backgroundColor: "white" }}></div>
       <div className="container position-relative">
         <div
@@ -55,6 +120,7 @@ export default function Contact() {
           </div>
         </div>
         <form
+          onSubmit={submit}
           className="mt-5 position-relative"
           style={{
             borderTop: "1px solid rgba(246, 246, 246, 0.5)",
@@ -71,6 +137,8 @@ export default function Contact() {
             <input
               type="text"
               id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               style={{
                 backgroundColor: "inherit",
                 outline: "none",
@@ -90,6 +158,8 @@ export default function Contact() {
               البريد الإلكتروني
             </label>
             <input
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               type="text"
               id="email"
               style={{
@@ -110,6 +180,8 @@ export default function Contact() {
               رقم الجوال ؟
             </label>
             <input
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
               type="text"
               id="phone"
               style={{
@@ -130,6 +202,8 @@ export default function Contact() {
               الرسالة...
             </label>
             <textarea
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               type="text"
               id="message"
               style={{
@@ -143,7 +217,7 @@ export default function Contact() {
               placeholder="مرحباً بيرين, هل يمكنكم مساعدتي ب....*"
             ></textarea>
           </div>
-          <div
+          <button
             className="d-flex align-items-center justify-content-center flex-column"
             style={{
               backgroundColor: "#50B065",
@@ -156,11 +230,12 @@ export default function Contact() {
               zIndex: "1",
               cursor: "pointer",
               userSelect: "none",
+              border: "none",
             }}
           >
             <img src={require("./Assest/Contact/send2.png")} alt="icon" />
             <p className="text-white">إرسال</p>
-          </div>
+          </button>
         </form>
       </div>
     </div>

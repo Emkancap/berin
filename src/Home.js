@@ -1,6 +1,6 @@
 import Box from "./Components/Box";
 import axios from "axios";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Home() {
@@ -8,6 +8,7 @@ export default function Home() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const ref = useRef(null);
 
   async function submit(e) {
     e.preventDefault();
@@ -21,26 +22,27 @@ export default function Home() {
         message: message,
       },
     })
-      .then((res) => console.log(res))
+      .then((res) => {
+        if (res.status === 200) {
+          ref.current.click();
+        }
+      })
       .catch((err) => console.log(err));
-    if (n.status === 200) {
-      window.location.pathname = "/";
-    }
   }
 
   return (
     <div>
       <a
-        style={{ cursor: "pointer" }}
         data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-      >
-        شهادة ضريبة القيمة المضافة
-      </a>
+        data-bs-target="#exampleModalHome"
+        ref={ref}
+      ></a>
 
       <div
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
         className="modal fade"
-        id="exampleModal"
+        id="exampleModalHome"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
@@ -51,12 +53,14 @@ export default function Home() {
               <h5 className="modal-title" id="exampleModalLabel">
                 تم إرسال الرسالة بنجاح{" "}
               </h5>
-              <button
-                type="button"
-                className="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
+              <div class="success-checkmark">
+                <div class="check-icon">
+                  <span class="icon-line line-tip"></span>
+                  <span class="icon-line line-long"></span>
+                  <div class="icon-circle"></div>
+                  <div class="icon-fix"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

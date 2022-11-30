@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   const [navbar, setNavbar] = useState("Home");
   const [count, setCount] = useState("");
-  console.log(count);
 
   return (
     <div>
