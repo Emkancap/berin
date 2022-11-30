@@ -449,6 +449,12 @@ body {
   left: -16px;
   background: url("./Assest/About/quotation-mark\ 3.png");
 }
+@media (max-width: 768px) {
+  .custom-h1::after,
+  .custom-h1::before {
+    top: -17px;
+  }
+}
 .custom-p {
   background-color: #1b1b1f;
   width: 70px;
