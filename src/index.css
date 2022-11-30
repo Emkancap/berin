@@ -672,7 +672,7 @@ body {
   }
   .fount-parent {
     height: 50% !important;
-    width: 100%;
+    width: 50%;
   }
 }
 .fount-parent {
@@ -680,7 +680,7 @@ body {
   background-image: url("./Assest/Home/Saudia\ Arabia.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: 100%;
   width: 100%;
 }
