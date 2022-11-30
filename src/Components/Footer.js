@@ -9,7 +9,7 @@ export default function Footer() {
             <div className="logo-footer text-center mb-4">
               <img
                 src={require("../Assest/Footer/Berain 2.png")}
-                className="img-fluid"
+                width="150px"
                 alt="logo"
               />
             </div>
