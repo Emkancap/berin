@@ -26,11 +26,11 @@ export default function Contact() {
               style={{ borderBottom: "1px solid rgba(246, 246, 246, 0.5)" }}
             >
               <a
-                href="mailto:info@berain.com.sa"
+                href="mailto:info@water-sa.online"
                 style={{ textDecoration: "none", color: "white" }}
                 className="ms-2"
               >
-                info@berain.com.sa
+                info@water-sa.online
               </a>
               <img
                 src={require("./Assest/Contact/directinbox.png")}
@@ -38,7 +38,7 @@ export default function Contact() {
               />
             </div>
             <div className="fw-bold">
-              <span className="ms-2"> 920025555</span>
+              <span className="ms-2"> 966583806995</span>
               <img src={require("./Assest/Contact/Vector.png")} alt="icon" />
             </div>
           </div>
@@ -49,7 +49,7 @@ export default function Contact() {
               style={{ textDecoration: "none", color: "white" }}
               className="ms-2"
             >
-              Export@berain.com.sa
+              Export@water-sa.online
             </a>
             <img src={require("./Assest/Contact/directinbox.png")} alt="icon" />
           </div>
@@ -66,7 +66,7 @@ export default function Contact() {
             style={{ borderBottom: "1px solid rgba(246, 246, 246, 0.5)" }}
           >
             <label htmlFor="name" className="py-3 d-block text-white">
-              الاسم بالكامل ؟
+              أدخل اسمك بالكامل
             </label>
             <input
               type="text"
@@ -78,7 +78,7 @@ export default function Contact() {
                 caretColor: "white",
                 color: "white",
               }}
-              placeholder="نور نعساني"
+              placeholder="الاسم الكامل...."
             ></input>
           </div>
 
@@ -99,7 +99,7 @@ export default function Contact() {
                 caretColor: "white",
                 color: "white",
               }}
-              placeholder="Nour@n.com *"
+              placeholder="Example@gmail.com *"
             ></input>
           </div>
           <div
@@ -119,7 +119,7 @@ export default function Contact() {
                 caretColor: "white",
                 color: "white",
               }}
-              placeholder="***********"
+              placeholder="96633555448"
             ></input>
           </div>
           <div

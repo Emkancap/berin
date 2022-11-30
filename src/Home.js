@@ -95,7 +95,7 @@ export default function Home() {
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img
-                src={require("./Assest/Home/بيرين-لحياة-صحية.jpg")}
+                src={require("./Assest/Home/بيرين-العذبة.jpg")}
                 className="d-block w-100"
                 alt="..."
               />
@@ -116,7 +116,7 @@ export default function Home() {
             </div>
             <div className="carousel-item">
               <img
-                src={require("./Assest/Home/بيرين-العذبة.jpg")}
+                src={require("./Assest/Home/بيرين-لحياة-صحية.jpg")}
                 className="d-block w-100"
                 alt="..."
               />
@@ -237,7 +237,7 @@ export default function Home() {
                 >
                   <a
                     style={{ textDecoration: "none", color: "white" }}
-                    href="https://api.whatsapp.com/send?phone=920025555"
+                    href="https://api.whatsapp.com/send?phone=966583806995"
                   >
                     <div className="d-flex flex-column align-items-center justify-content-center h-100 fw-normal">
                       <img
@@ -257,154 +257,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="container">
-        <div className="Our-offers mt-5">
-          <h1 className="fw-bold">اتصل بنا</h1>
-          <p className="custom-p"></p>
-          <div style={{ backgroundColor: "#01305D" }} className="mt-5 pb-5">
-            <div style={{ backgroundColor: "white" }}></div>
-            <div className="container position-relative">
-              <form
-                onSubmit={submit}
-                className="mt-5 position-relative"
-                style={{
-                  borderTop: "1px solid rgba(246, 246, 246, 0.5)",
-                  borderBottom: "1px solid rgba(246, 246, 246, 0.5)",
-                }}
-              >
-                <div
-                  className="py-2"
-                  style={{ borderBottom: "1px solid rgba(246, 246, 246, 0.5)" }}
-                >
-                  <label htmlFor="name" className="py-3 d-block text-white">
-                    الاسم بالكامل ؟
-                  </label>
-                  <input
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    name="name"
-                    required
-                    type="text"
-                    id="name"
-                    style={{
-                      backgroundColor: "inherit",
-                      outline: "none",
-                      border: "none",
-                      caretColor: "white",
-                      color: "white",
-                    }}
-                    placeholder="نور نعساني"
-                  ></input>
-                </div>
-
-                <div
-                  className="py-2"
-                  style={{ borderBottom: "1px solid rgba(246, 246, 246, 0.5)" }}
-                >
-                  <label htmlFor="email" className="py-3 d-block text-white">
-                    البريد الإلكتروني
-                  </label>
-                  <input
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    name="email"
-                    required
-                    type="text"
-                    id="email"
-                    style={{
-                      backgroundColor: "inherit",
-                      outline: "none",
-                      border: "none",
-                      caretColor: "white",
-                      color: "white",
-                    }}
-                    placeholder="Nour@n.com *"
-                  ></input>
-                </div>
-                <div
-                  className="py-2"
-                  style={{ borderBottom: "1px solid rgba(246, 246, 246, 0.5)" }}
-                >
-                  <label htmlFor="phone" className="py-3 d-block text-white">
-                    رقم الهاتف او الجوال ؟
-                  </label>
-                  <input
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    name="phone"
-                    required
-                    type="text"
-                    id="phone"
-                    style={{
-                      backgroundColor: "inherit",
-                      outline: "none",
-                      border: "none",
-                      caretColor: "white",
-                      color: "white",
-                    }}
-                    placeholder="***********"
-                  ></input>
-                </div>
-                <div className="py-2">
-                  <label htmlFor="message" className="py-3 d-block text-white">
-                    الرسالة...
-                  </label>
-                  <textarea
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    name="message"
-                    required
-                    type="text"
-                    id="message"
-                    style={{
-                      backgroundColor: "inherit",
-                      outline: "none",
-                      border: "none",
-                      caretColor: "white",
-                      color: "white",
-                      width: "100%",
-                    }}
-                    placeholder="مرحباً بيرين, هل يمكنكم مساعدتي ب....*"
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  style={{ backgroundColor: "inherit", border: "none" }}
-                >
-                  <div
-                    className="d-flex align-items-center justify-content-center flex-column"
-                    style={{
-                      backgroundColor: "#50B065",
-                      borderRadius: "50%",
-                      width: "100px",
-                      height: "100px",
-                      position: "absolute",
-                      bottom: "-47px",
-                      left: "20px",
-                      zIndex: "1",
-                      cursor: "pointer",
-                      userSelect: "none",
-                    }}
-                  >
-                    <img
-                      src={require("./Assest/Contact/send2.png")}
-                      alt="icon"
-                    />
-                    <p className="text-white">إرسال</p>
-                  </div>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Map */}
       <div className="container">
         <div className="map d-flex align-items-center justify-content-between">
           <h3 data-aos="fade-down" className="text-black w-50">
-            خدمة التوصيل إالى كافة المدن السعودية عن طريق مندوبي الشركة. يوجد
-            أكثر من 40 مندوب في كل مدينة لخدمتك
+            خدمة التوصيل إلى كافة المدن السعودية عن طريق مندوبي الشركة.
+            <h3> يوجد أكثر من 40 مندوب في كل مدينة لخدمتك</h3>
           </h3>
           <div className="fount-parent" data-aos="fade-right">
             <div id="second-fountain">
@@ -441,6 +300,124 @@ export default function Home() {
       </div>
 
       {/* End Map */}
+      <div className="container">
+        <div className="Our-offers mt-5">
+          <h1 className="fw-bold">اتصل بنا</h1>
+          <p className="custom-p"></p>
+          <div style={{ backgroundColor: "#01305D" }} className="mt-5 pb-5">
+            <div style={{ backgroundColor: "white" }}></div>
+            <div className="container position-relative">
+              <form
+                className="mt-5 position-relative"
+                style={{
+                  borderTop: "1px solid rgba(246, 246, 246, 0.5)",
+                  borderBottom: "1px solid rgba(246, 246, 246, 0.5)",
+                }}
+              >
+                <div
+                  className="py-2"
+                  style={{ borderBottom: "1px solid rgba(246, 246, 246, 0.5)" }}
+                >
+                  <label htmlFor="name" className="py-3 d-block text-white">
+                    أدخل اسمك بالكامل
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    style={{
+                      backgroundColor: "inherit",
+                      outline: "none",
+                      border: "none",
+                      caretColor: "white",
+                      color: "white",
+                    }}
+                    placeholder="الاسم الكامل...."
+                  ></input>
+                </div>
+
+                <div
+                  className="py-2"
+                  style={{ borderBottom: "1px solid rgba(246, 246, 246, 0.5)" }}
+                >
+                  <label htmlFor="email" className="py-3 d-block text-white">
+                    البريد الإلكتروني
+                  </label>
+                  <input
+                    type="text"
+                    id="email"
+                    style={{
+                      backgroundColor: "inherit",
+                      outline: "none",
+                      border: "none",
+                      caretColor: "white",
+                      color: "white",
+                    }}
+                    placeholder="Example@gmail.com *"
+                  ></input>
+                </div>
+                <div
+                  className="py-2"
+                  style={{ borderBottom: "1px solid rgba(246, 246, 246, 0.5)" }}
+                >
+                  <label htmlFor="phone" className="py-3 d-block text-white">
+                    رقم الهاتف او الجوال ؟
+                  </label>
+                  <input
+                    type="text"
+                    id="phone"
+                    style={{
+                      backgroundColor: "inherit",
+                      outline: "none",
+                      border: "none",
+                      caretColor: "white",
+                      color: "white",
+                    }}
+                    placeholder="96633555448"
+                  ></input>
+                </div>
+                <div
+                  className="py-2"
+                  style={{ borderBottom: "1px solid rgba(246, 246, 246, 0.5)" }}
+                >
+                  <label htmlFor="message" className="py-3 d-block text-white">
+                    الرسالة...
+                  </label>
+                  <input
+                    type="text"
+                    id="message"
+                    style={{
+                      backgroundColor: "inherit",
+                      outline: "none",
+                      border: "none",
+                      caretColor: "white",
+                      color: "white",
+                    }}
+                    placeholder="مرحباً بيرين, هل يمكنكم مساعدتي ب....*"
+                  ></input>
+                </div>
+                <div
+                  className="d-flex align-items-center justify-content-center flex-column"
+                  style={{
+                    backgroundColor: "#50B065",
+                    borderRadius: "50%",
+                    width: "100px",
+                    height: "100px",
+                    position: "absolute",
+                    bottom: "-47px",
+                    left: "20px",
+                    zIndex: "1",
+                    cursor: "pointer",
+                    userSelect: "none",
+                  }}
+                >
+                  <img src={require("./Assest/Contact/send2.png")} alt="icon" />
+                  <p className="text-white">إرسال</p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div className="about-us container">
         <div className="row align-items-center justify-content-center custom-about my-4 ">

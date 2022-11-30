@@ -668,7 +668,7 @@ body {
   }
   .map h3 {
     width: 100% !important;
-    text-align: center;
+    text-align: right;
   }
   .fount-parent {
     height: 50% !important;
@@ -883,6 +883,9 @@ body {
   .img-recruit img {
     width: auto;
     max-width: 100%;
+  }
+  .parent-recruit {
+    margin-bottom: 50px;
   }
 }
 @media (max-width: 399px) {
