@@ -32,9 +32,10 @@ export default function Home() {
     <div>
       <div className="position-relative parent-home-land">
         <div
+          animation="slider"
           id="carouselExampleCaptions"
           className="carousel slide"
-          data-bs-ride="false"
+          data-bs-ride="carousel"
         >
           <div className="carousel-indicators">
             <div className="arrow-sliders">
