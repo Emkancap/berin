@@ -15,6 +15,8 @@ export default function Box(props) {
         borderRight: props.borderRight,
         color: props.color,
       }}
-    ></div>
+    >
+      {props.children}
+    </div>
   );
 }
