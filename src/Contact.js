@@ -129,7 +129,7 @@ export default function Contact() {
             <label htmlFor="message" className="py-3 d-block text-white">
               الرسالة...
             </label>
-            <input
+            <textarea
               type="text"
               id="message"
               style={{
@@ -138,9 +138,10 @@ export default function Contact() {
                 border: "none",
                 caretColor: "white",
                 color: "white",
+                width: "100%",
               }}
               placeholder="مرحباً بيرين, هل يمكنكم مساعدتي ب....*"
-            ></input>
+            ></textarea>
           </div>
           <div
             className="d-flex align-items-center justify-content-center flex-column"
