@@ -353,7 +353,7 @@ body {
     position: relative;
   }
   .carousel-indicators {
-    transform: rotate(90deg);
+    transform: rotate(270deg);
     width: 215px;
     height: 24px;
     position: absolute;
