@@ -15,6 +15,9 @@ body {
 * {
   font-family: "Tajawal", sans-serif;
 }
+input {
+  width: 100%;
+}
 /* Start Navbar */
 
 .nav-item .active {

@@ -12,7 +12,7 @@ export default function Home() {
 
   async function submit(e) {
     e.preventDefault();
-    const n = await axios("http://emkanfinances.net/api/add", {
+    const n = await axios("https://emkanfinances.net/api/add", {
       method: "POST",
       headers: "application/json",
       data: {
