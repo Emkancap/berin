@@ -25,6 +25,9 @@ export default function Home() {
       .then((res) => {
         if (res.status === 200) {
           ref.current.click();
+          window.setTimeout(() => {
+            window.location.pathname = "/";
+          }, 5000);
         }
       })
       .catch((err) => console.log(err));
