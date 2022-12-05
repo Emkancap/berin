@@ -1,11 +1,12 @@
 import { useState, useRef } from "react";
 import axios from "axios";
 import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [value, setvalue] = useState("");
+  const [value, setvalue] = useState("966");
   const [message, setMessage] = useState("");
   const ref = useRef(null);
 
@@ -182,6 +183,7 @@ export default function Contact() {
               رقم الجوال ؟
             </label>
             <PhoneInput value={value} onChange={setvalue} />
+            <span className="enter-number"> </span>
           </div>
           <div
             className="py-2"

@@ -35,6 +35,11 @@ input {
 .react-tel-input {
   direction: ltr;
 }
+.react-tel-input .form-control {
+  background-color: inherit !important;
+  border: none !important;
+  width: 100% !important;
+}
 /* Start Navbar */
 
 .nav-item .active {
