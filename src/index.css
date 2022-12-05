@@ -11,12 +11,29 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.special-label {
+  display: none !important;
+}
 
 * {
   font-family: "Tajawal", sans-serif;
 }
 input {
   width: 100%;
+}
+.form-control {
+  background-color: inherit;
+  border: none;
+  color: white;
+}
+.form-control:focus {
+  background-color: inherit;
+  border: none;
+  color: white;
+  box-shadow: none;
+}
+.react-tel-input {
+  direction: ltr;
 }
 /* Start Navbar */
 

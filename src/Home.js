@@ -2,11 +2,12 @@ import Box from "./Components/Box";
 import axios from "axios";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import PhoneInput from "react-phone-input-2";
 
 export default function Home() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
+  const [value, setvalue] = useState("");
   const [message, setMessage] = useState("");
   const ref = useRef(null);
 
@@ -18,7 +19,7 @@ export default function Home() {
       data: {
         name: name,
         email: email,
-        phone: phone,
+        phone: value,
         message: message,
       },
     })
@@ -276,7 +277,7 @@ export default function Home() {
                 >
                   <a
                     style={{ textDecoration: "none", color: "white" }}
-                    href="https://api.whatsapp.com/send?phone=966583806995"
+                    href="https://wa.me/message/TDUG4FHHP6TPP1"
                   >
                     <div className="d-flex flex-column align-items-center justify-content-center h-100 fw-normal">
                       <img
@@ -409,20 +410,7 @@ export default function Home() {
                   <label htmlFor="phone" className="py-3 d-block text-white">
                     رقم الجوال ؟
                   </label>
-                  <input
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    type="text"
-                    id="phone"
-                    style={{
-                      backgroundColor: "inherit",
-                      outline: "none",
-                      border: "none",
-                      caretColor: "white",
-                      color: "white",
-                    }}
-                    placeholder="966583806995"
-                  ></input>
+                  <PhoneInput value={value} onChange={setvalue} />
                 </div>
                 <div
                   className="py-2"

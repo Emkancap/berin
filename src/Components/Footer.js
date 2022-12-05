@@ -25,7 +25,7 @@ export default function Footer() {
               }}
             >
               <li>
-                <a href="https://api.whatsapp.com/send?phone=966583806995">
+                <a href="https://wa.me/message/TDUG4FHHP6TPP1">
                   <i className="fa-brands fa-square-whatsapp"></i>
                 </a>
               </li>
