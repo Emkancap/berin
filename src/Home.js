@@ -1,75 +1,11 @@
 import Box from "./Components/Box";
-import axios from "axios";
-import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 
 export default function Home() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [value, setvalue] = useState("966");
-  const [message, setMessage] = useState("");
-  const ref = useRef(null);
-
-  async function submit(e) {
-    e.preventDefault();
-    const n = await axios("https://emkanfinances.net/api/add", {
-      method: "POST",
-      headers: "application/json",
-      data: {
-        name: name,
-        email: email,
-        phone: value,
-        message: message,
-      },
-    })
-      .then((res) => {
-        if (res.status === 200) {
-          ref.current.click();
-          window.setTimeout(() => {
-            window.location.pathname = "/";
-          }, 5000);
-        }
-      })
-      .catch((err) => console.log(err));
-  }
-
   return (
     <div>
-      <a
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModalHome"
-        ref={ref}
-      ></a>
-
-      <div
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        className="modal fade"
-        id="exampleModalHome"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h5 className="modal-title" id="exampleModalLabel">
-                تم إرسال الرسالة بنجاح{" "}
-              </h5>
-              <div class="success-checkmark">
-                <div class="check-icon">
-                  <span class="icon-line line-tip"></span>
-                  <span class="icon-line line-long"></span>
-                  <div class="icon-circle"></div>
-                  <div class="icon-fix"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div className="position-relative parent-home-land">
         <div
           animation="slider"
@@ -298,7 +234,96 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* Bottels */}
+      <div className="container py-4">
+        <div className="d-flex align-items-center justify-content-between flex-wrap gap-2 gap-md-0">
+          <a
+            href="https://wa.me/message/TDUG4FHHP6TPP1"
+            data-aos="fade-right"
+            className="col-12 col-md-4"
+            style={{
+              height: "150px",
+              textDecoration: "none",
+              color: "black",
+            }}
+          >
+            <div
+              className=" d-flex align-items-center justify-content-start gap-4 p-1 h-100 ms-1"
+              style={{
+                border: "1px solid  #c5c5c5",
+                borderRadius: "10px",
+                height: "150px",
+                textDecoration: "none",
+                color: "black",
+              }}
+            >
+              <img
+                src={require("./Assest/Home/bottleGroup.png")}
+                alt="Basic Group Bottles"
+                style={{ objectFit: "cover", width: "80px" }}
+              />
+              <h3 className=" m-0">المجموعة الاساسية</h3>
+            </div>
+          </a>
+          <a
+            href="https://wa.me/message/TDUG4FHHP6TPP1"
+            data-aos="fade-right"
+            className="col-12 col-md-4  "
+            style={{
+              height: "150px",
+              textDecoration: "none",
+              color: "black",
+            }}
+          >
+            <div
+              className=" d-flex align-items-center justify-content-start gap-4 p-1 h-100 ms-1"
+              style={{
+                border: "1px solid  #c5c5c5",
+                borderRadius: "10px",
+                height: "150px",
+                textDecoration: "none",
+                color: "black",
+              }}
+            >
+              <img
+                src={require("./Assest/Home/bottleBig.png")}
+                alt="Bottle Big"
+                style={{ objectFit: "cover", width: "80px" }}
+              />
+              <h3 className=" m-0">المجموعة الكبيرة</h3>
+            </div>
+          </a>
 
+          <a
+            href="https://wa.me/message/TDUG4FHHP6TPP1"
+            data-aos="fade-right"
+            className="col-12 col-md-4 "
+            style={{
+              height: "150px",
+              textDecoration: "none",
+              color: "black",
+            }}
+          >
+            <div
+              className=" d-flex align-items-center justify-content-start gap-4 p-1 h-100"
+              style={{
+                border: "1px solid  #c5c5c5",
+                borderRadius: "10px",
+                height: "150px",
+                textDecoration: "none",
+                color: "black",
+              }}
+            >
+              <img
+                src={require("./Assest/Home/bottleGlass4.png")}
+                alt="Berin Glass"
+                style={{ objectFit: "cover", width: "80px" }}
+              />
+              <h3 className=" m-0">بيرين زجاج</h3>
+            </div>
+          </a>
+        </div>
+      </div>
       {/* Map */}
       <div className="container ">
         <div className="our-services">
@@ -309,158 +334,11 @@ export default function Home() {
               خدمة توصيل المياه إلى كافة المدن السعودية عن طريق مندوبي الشركة.
               <h3> يوجد أكثر من 40 مندوب في كل مدينة لخدمتك</h3>
             </h3>
-            <div className="fount-parent" data-aos="fade-right">
-              <div id="second-fountain">
-                {/* <div class="fountain-animation small">
-                <div class="fountain-right">
-                  <div class="rotate-center water1"></div>
-                  <div class="rotate-center water2"></div>
-                  <div class="rotate-center water3"></div>
-                </div>
-
-                <div class="fountain-left">
-                  <div class="rotate-center2 water4"></div>
-                  <div class="rotate-center2 water5"></div>
-                  <div class="rotate-center2 water6"></div>
-                </div>
-              </div> */}
-                {/* <div class="fountain-animation big">
-                <div class="fountain-right">
-                  <div class="rotate-center water1"></div>
-                  <div class="rotate-center water2"></div>
-                  <div class="rotate-center water3"></div>
-                </div>
-
-                <div class="fountain-left">
-                  <div class="rotate-center2 water4"></div>
-                  <div class="rotate-center2 water5"></div>
-                  <div class="rotate-center2 water6"></div>
-                </div>
-                <div className="block-base"></div>
-              </div> */}
-              </div>
-            </div>
+            <div className="fount-parent" data-aos="fade-right"></div>
           </div>
         </div>
       </div>
       {/* End Map */}
-      <div className="container">
-        <div className="Our-offers mt-5">
-          <h1 className="fw-bold">اتصل بنا</h1>
-          <p className="custom-p"></p>
-          <div style={{ backgroundColor: "#01305D" }} className="mt-5 pb-5">
-            <div style={{ backgroundColor: "white" }}></div>
-            <div className="container position-relative">
-              <form
-                onSubmit={submit}
-                className="mt-5 position-relative"
-                style={{
-                  borderTop: "1px solid rgba(246, 246, 246, 0.5)",
-                  borderBottom: "1px solid rgba(246, 246, 246, 0.5)",
-                }}
-              >
-                <div
-                  className="py-2"
-                  style={{ borderBottom: "1px solid rgba(246, 246, 246, 0.5)" }}
-                >
-                  <label htmlFor="name" className="py-3 d-block text-white">
-                    أدخل اسمك بالكامل
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    style={{
-                      backgroundColor: "inherit",
-                      outline: "none",
-                      border: "none",
-                      caretColor: "white",
-                      color: "white",
-                    }}
-                    placeholder="الاسم الكامل...."
-                  ></input>
-                </div>
-
-                <div
-                  className="py-2"
-                  style={{ borderBottom: "1px solid rgba(246, 246, 246, 0.5)" }}
-                >
-                  <label htmlFor="email" className="py-3 d-block text-white">
-                    البريد الإلكتروني
-                  </label>
-                  <input
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    type="text"
-                    id="email"
-                    style={{
-                      backgroundColor: "inherit",
-                      outline: "none",
-                      border: "none",
-                      caretColor: "white",
-                      color: "white",
-                    }}
-                    placeholder="Example@gmail.com *"
-                  ></input>
-                </div>
-                <div
-                  className="py-2"
-                  style={{ borderBottom: "1px solid rgba(246, 246, 246, 0.5)" }}
-                >
-                  <label htmlFor="phone" className="py-3 d-block text-white">
-                    رقم الجوال ؟
-                  </label>
-                  <PhoneInput value={value} onChange={setvalue} />
-                </div>
-                <div
-                  className="py-2"
-                  style={{ borderBottom: "1px solid rgba(246, 246, 246, 0.5)" }}
-                >
-                  <label htmlFor="message" className="py-3 d-block text-white">
-                    الرسالة...
-                  </label>
-                  <textarea
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    type="text"
-                    id="message"
-                    style={{
-                      backgroundColor: "inherit",
-                      outline: "none",
-                      border: "none",
-                      caretColor: "white",
-                      color: "white",
-                      width: "100%",
-                    }}
-                    placeholder="مرحباً بيرين, هل يمكنكم مساعدتي ب....*"
-                  ></textarea>
-                </div>
-                <button
-                  className="d-flex align-items-center justify-content-center flex-column"
-                  style={{
-                    backgroundColor: "#50B065",
-                    borderRadius: "50%",
-                    width: "100px",
-                    height: "100px",
-                    position: "absolute",
-                    bottom: "-47px",
-                    left: "20px",
-                    zIndex: "1",
-                    cursor: "pointer",
-                    userSelect: "none",
-                    border: "none",
-                  }}
-                >
-                  <img src={require("./Assest/Contact/send2.png")} alt="icon" />
-                  <p className="text-white">إرسال</p>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div className="about-us container">
         <div className="row align-items-center justify-content-center custom-about my-4 ">
           <div className="col-md-6">
