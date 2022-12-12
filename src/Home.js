@@ -214,7 +214,7 @@ export default function Home() {
                 >
                   <a
                     style={{ textDecoration: "none", color: "white" }}
-                    href="https://wa.me/message/TDUG4FHHP6TPP1"
+                    href="https://wa.me/message/+966558590684"
                   >
                     <div className="d-flex flex-column align-items-center justify-content-center h-100 fw-normal">
                       <img
@@ -238,7 +238,7 @@ export default function Home() {
       <div className="container py-4">
         <div className="d-flex align-items-center justify-content-between flex-wrap gap-2 gap-md-0">
           <a
-            href="https://wa.me/message/TDUG4FHHP6TPP1"
+            href="https://wa.me/message/+966558590684"
             data-aos="fade-right"
             className="col-12 col-md-4"
             style={{
@@ -262,11 +262,11 @@ export default function Home() {
                 alt="Basic Group Bottles"
                 style={{ objectFit: "cover", width: "80px" }}
               />
-              <h3 className=" m-0">المجموعة الاساسية</h3>
+              <h3 className="m-0">المجموعة الاساسية</h3>
             </div>
           </a>
           <a
-            href="https://wa.me/message/TDUG4FHHP6TPP1"
+            href="https://wa.me/message/+966558590684"
             data-aos="fade-right"
             className="col-12 col-md-4  "
             style={{
@@ -295,7 +295,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://wa.me/message/TDUG4FHHP6TPP1"
+            href="https://wa.me/message/+966558590684"
             data-aos="fade-right"
             className="col-12 col-md-4 "
             style={{
