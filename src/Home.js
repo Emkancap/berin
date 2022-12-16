@@ -67,33 +67,46 @@ export default function Home() {
                 data-bs-slide-to="3"
                 aria-label="Slide 4"
               ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="4"
+                aria-label="Slide 5"
+              ></button>
             </div>
           </div>
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img
-                src={require("./Assest/Home/بيرين-العذبة.jpg")}
+                src={require("./Assest/Home/1.jpg")}
                 className="d-block w-100"
                 alt="..."
               />
             </div>
             <div className="carousel-item">
               <img
-                src={require("./Assest/Home/IMG_20221127_194403_638.jpg")}
+                src={require("./Assest/Home/2.jpg")}
                 className="d-block w-100"
                 alt="..."
               />
             </div>
             <div className="carousel-item">
               <img
-                src={require("./Assest/Home/من-قلب-الطبيعة.jpg")}
+                src={require("./Assest/Home/3.jpg")}
                 className="d-block w-100"
                 alt="..."
               />
             </div>
             <div className="carousel-item">
               <img
-                src={require("./Assest/Home/بيرين-لحياة-صحية.jpg")}
+                src={require("./Assest/Home/4.jpg")}
+                className="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div className="carousel-item">
+              <img
+                src={require("./Assest/Home/5.jpg")}
                 className="d-block w-100"
                 alt="..."
               />
@@ -236,7 +249,7 @@ export default function Home() {
       </div>
       {/* Bottels */}
       <div className="container py-4">
-        <div className="d-flex align-items-center justify-content-between flex-wrap gap-2 gap-md-0">
+        <div className="d-flex align-items-center justify-content-between flex-wrap gap-2 gutter-md-y-1">
           <a
             href="https://api.whatsapp.com/send?phone=966558590684&text="
             data-aos="fade-right"
@@ -258,7 +271,7 @@ export default function Home() {
               }}
             >
               <img
-                src={require("./Assest/Home/bottleGroup.png")}
+                src={require("./Assest/Home/Basic.png")}
                 alt="Basic Group Bottles"
                 style={{ objectFit: "cover", width: "80px" }}
               />
@@ -286,14 +299,13 @@ export default function Home() {
               }}
             >
               <img
-                src={require("./Assest/Home/bottleBig.png")}
+                src={require("./Assest/Home/Big.png")}
                 alt="Bottle Big"
                 style={{ objectFit: "cover", width: "80px" }}
               />
               <h3 className=" m-0">المجموعة الكبيرة</h3>
             </div>
           </a>
-
           <a
             href="https://api.whatsapp.com/send?phone=966558590684&text="
             data-aos="fade-right"
@@ -315,7 +327,35 @@ export default function Home() {
               }}
             >
               <img
-                src={require("./Assest/Home/bottleGlass4.png")}
+                src={require("./Assest/Home/Glass.png")}
+                alt="Berin Glass"
+                style={{ objectFit: "cover", width: "80px" }}
+              />
+              <h3 className=" m-0">بيرين فوارة زجاج</h3>
+            </div>
+          </a>
+          <a
+            href="https://api.whatsapp.com/send?phone=966558590684&text="
+            data-aos="fade-right"
+            className="col-12 col-md-4 "
+            style={{
+              height: "150px",
+              textDecoration: "none",
+              color: "black",
+            }}
+          >
+            <div
+              className=" d-flex align-items-center justify-content-start gap-4 p-1 h-100"
+              style={{
+                border: "1px solid  #c5c5c5",
+                borderRadius: "10px",
+                height: "150px",
+                textDecoration: "none",
+                color: "black",
+              }}
+            >
+              <img
+                src={require("./Assest/Home/justGlass.png")}
                 alt="Berin Glass"
                 style={{ objectFit: "cover", width: "80px" }}
               />
