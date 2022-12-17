@@ -273,7 +273,11 @@ export default function Home() {
               <img
                 src={require("./Assest/Home/Basic.png")}
                 alt="Basic Group Bottles"
-                style={{ objectFit: "cover", width: "80px" }}
+                style={{
+                  objectFit: "cover",
+                  width: "80px",
+                  transform: "rotate(-90deg)",
+                }}
               />
               <h3 className="m-0">المجموعة الاساسية</h3>
             </div>
