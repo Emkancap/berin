@@ -106,7 +106,7 @@ export default function Contact() {
               />
             </div>
             <div className="fw-bold">
-              <span className="ms-2"> 966583806995</span>
+              <span className="ms-2">966595587077</span>
               <img src={require("./Assest/Contact/Vector.png")} alt="icon" />
             </div>
           </div>
